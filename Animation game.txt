@@ -1,4 +1,3 @@
-
 #include <raylib.h>
 
 int main ()
@@ -11,10 +10,10 @@ int main ()
     int jump = 10;
     bool isair = false;
 
-    InitWindow(screen_width,screen_height, "Texture 2D Game");
+    InitWindow(screen_width,screen_height, "texture 2D Game");
 
     Texture2D scarfy;
-    scarfy = LoadTexture("Textures/scarfy");
+    scarfy = LoadTexture("textures/scarfy.png");
     Rectangle scarfyrec;
     scarfyrec.width = scarfy.width/6;
     scarfyrec.height = scarfy.height;
@@ -47,7 +46,7 @@ int main ()
 
         scarfypos.y += velocity;
 
-      //  DrawTextureRec(scarfy.scarfyrec,scarfypos,WHITE);
+        DrawTextureRec(scarfy,scarfyrec,scarfypos,WHITE);
         EndDrawing();
     }
 UnloadTexture(scarfy);
